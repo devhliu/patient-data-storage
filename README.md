@@ -1,7 +1,7 @@
-# patient-data-storage
-A web app that stores patient data for a therapist
+# Patient data storage
+Um aplicativo que salva dados de pacientes para terapeutas
 
-# Technologies used
+# Tecnologias usadas
 <b>Backend</b>
 - Flask: https://flask.palletsprojects.com/en/2.1.x/
 - PostgreSQL: https://www.postgresql.org
@@ -12,11 +12,11 @@ A web app that stores patient data for a therapist
 <b>Styling</b>
 - Material UI: https://mui.com/
 
-# How to run
-- Open the ```credentials.json``` file in the root directory and fill the ```SECRET_KEY``` and ```DATABASE_URL``` values
+# Como rodar
+- Abra o arquivo ```credentials.json``` no diretório raíz e coloque os valores de ```SECRET_KEY``` e ```DATABASE_URL```
 
-- You can put whatever you want in the secret key
-- To get the database url, you need to create a postgreSQL instance the way you prefer and write the url manually this way: ```postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]```
+- Você pode colocar o que quiser na secret key
+- Para conseguir o database url, você precisa criar uma instância de postgreSQL da maneira que preferir e escrever o url manualmente da seguinte forma: ```postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]```
 
-- Run the api by typing ```python app.py``` in a terminal
-- Run the client by opening another terminal and going to the client directory: ```cd client``` and typing ```npm start```
+- Rode a api digitando: ```python app.py``` em um terminal
+- Rode o cliente abrindo outro terminal e indo até o diretório client: ```cd client``` e digitando ```npm start```
