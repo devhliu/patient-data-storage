@@ -81,6 +81,13 @@ def get_patients():
 def search_patient():
     patient = json.loads(request.data)
     searched_patient = Patient.query.filter_by(id=patient['id']).first()
+
+    if current_user.is_authenticated:
+        if current_user.id != searched_patient.medic_id:
+            return {'patient': None}
+    else:
+        return {'patient': None}
+
     return {'patient': {
         'id': searched_patient.id,
         'name': searched_patient.name,
@@ -137,6 +144,13 @@ def save_session():
 def display_session():
     session = json.loads(request.data)
     searched_session = Session.query.filter_by(id=session['id']).first()
+    session_patient = Patient.query.filter_by(id=searched_session.patient_id).first()
+
+    if current_user.is_authenticated:
+        if current_user.id != session_patient.medic_id:
+            return {'patient': None}
+    else:
+        return {'patient': None}
 
     if searched_session:
         return {'session': {
